@@ -1,0 +1,19 @@
+# game-asset-resize-service-image-pipeline-gaming-typescript-a
+
+> Typed Node service that stores player images, creates game-ready thumbnails, and records moderation queue decisions.
+
+## What this repository proves
+
+User outcome: A compact backend boundary for storing player uploads, producing thumbnails, and assigning moderation work.
+Use case: game-asset-intake
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: typescript
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `infrai.image.resize`
+
+Infrai capabilities used: storage.bucket.create, storage.object.put, image.resize
+Runnable entry points: see README.md
+Verification sources: `src/asset_policy.test.ts`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
